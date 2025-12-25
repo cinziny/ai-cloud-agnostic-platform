@@ -23,4 +23,4 @@ jobs:
           terragrunt --version
 
       - name: Terraform Plan (All Accounts)
-        run: terragrunt run-all plan
+        run: terragrunt run-all plan --terragrunt-working-dir terragrunt
