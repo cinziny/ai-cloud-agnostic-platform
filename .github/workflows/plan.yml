@@ -17,10 +17,10 @@ jobs:
       - name: Install Terragrunt
         run: |
           TG_VERSION=0.54.13
-          curl -L -o terragrunt \
-            https://github.com/gruntwork-io/terragrunt/releases/download/v${TG_VERSION}/terragrunt_linux_amd64
-          chmod +x terragrunt
-          sudo mv terragrunt /usr/local/bin/terragrunt
+          curl -L -o /tmp/terragrunt \
+          https://github.com/gruntwork-io/terragrunt/releases/download/v${TG_VERSION}/terragrunt_linux_amd64
+          chmod +x /tmp/terragrunt
+          sudo mv /tmp/terragrunt /usr/local/bin/terragrunt
           terragrunt --version
 
       - name: Terraform Plan (All Accounts)
