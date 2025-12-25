@@ -1,0 +1,49 @@
+environment: prod
+
+lifecycle:
+  ttlHours: null
+
+workload:
+  name: payments
+  type: stateless
+
+compute:
+  size: medium
+  count: 3
+  os: linux
+
+network:
+  cidr: 10.20.0.0/16
+
+storage:
+  encrypted: true
+  replication: true
+
+clouds:
+  primary:
+    provider: aws
+    region: us-east-1
+    purpose: active
+
+  secondary:
+    provider: gcp
+    region: us-central1
+    purpose: dr
+    enabled: true
+
+  tertiary:
+    provider: azure
+    region: eastus
+    purpose: standby
+    enabled: true
+
+governance:
+  approvalRequired: true
+  costThresholdMonthlyUSD: 5000
+
+tags:
+  env: prod
+  owner: platform
+  cost-center: cc-101
+  compliance: pci
+  criticality: high

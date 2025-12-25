@@ -1,0 +1,29 @@
+environment: dev
+
+lifecycle:
+  ttlHours: 24
+
+workload:
+  name: sample-app
+  type: stateless
+
+compute:
+  size: small
+  count: 1
+  os: linux
+
+network:
+  cidr: 10.10.0.0/16
+
+storage:
+  encrypted: true
+
+clouds:
+  primary:
+    provider: aws
+    region: us-east-1
+
+tags:
+  env: dev
+  owner: platform
+  cost-center: cc-101

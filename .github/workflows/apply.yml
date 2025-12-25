@@ -1,0 +1,9 @@
+name: apply
+on: workflow_dispatch
+
+jobs:
+  apply:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - run: terragrunt run-all apply
