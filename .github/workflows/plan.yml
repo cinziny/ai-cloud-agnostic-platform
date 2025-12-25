@@ -24,15 +24,3 @@ jobs:
 
       - name: Terraform Plan (All Accounts)
         run: terragrunt run-all plan
-
-      - name: Collect Terraform Plans
-        run: |
-          mkdir -p plans
-          find . -name tfplan -o -name terraform.tfplan -exec cp --parents {} plans/ \;
-
-      - name: Upload Terraform Plans
-        uses: actions/upload-artifact@v4
-        with:
-          name: terraform-plans
-          path: plans
-          retention-days: 7
