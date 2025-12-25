@@ -1,0 +1,2 @@
+apiVersion: compute.gcp.crossplane.io/v1beta1
+kind: Instance

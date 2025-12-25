@@ -1,0 +1,5 @@
+Review the Terraform plan JSON.
+Identify:
+- Security risks
+- Cost inefficiencies
+- Missing best practices

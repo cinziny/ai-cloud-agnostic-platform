@@ -1,0 +1,11 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-environment
+spec:
+  parameters:
+    - title: Environment
+      properties:
+        environment:
+          type: string
+          enum: [dev, prod]
