@@ -279,6 +279,11 @@ resource "google_compute_resource_policy" "ttl" {
     }
   }
 }
+
+terraform {
+  backend "s3" {}
+}
+
 ```
 
 **Notes:**
